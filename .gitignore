@@ -1,0 +1,7 @@
+# MacOS
+.DS_Store
+
+# Generated PDFs 
+*.pdf
+
+Source_Serif_4/
