@@ -40,3 +40,7 @@
 
 #let chiline() = { line(length: 100%) }
 
+#let date_format(body: "") = {
+  text(size: 0.85em, emph(body))
+}
+
