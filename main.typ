@@ -41,9 +41,14 @@ BSc. in Computer Science, #emph([Concentration in Algorithms and Complexity, Min
 
 #section_header(header_text: "Work Experience")
 
-#text(weight: 800, [Stripe])
+#text(fill: rgb("#003161"), [*Stripe*])
 #two_sided_text(
-  left_text: [Software Engineer II, Service Infrastructure > Production Engineering],
+  left_text: text(
+    size: 0.9em,
+    underline(
+      [Software Engineer II, Service Infrastructure > Production Engineering],
+    ),
+  ),
   right_text: date_format(body: "November 2024 - Present"),
 )
 #text(
@@ -55,7 +60,10 @@ BSc. in Computer Science, #emph([Concentration in Algorithms and Complexity, Min
 
 
 #two_sided_text(
-  left_text: [Software Engineer, Revenue Foundations > User Billing],
+  left_text: text(
+    size: 0.9em,
+    underline([Software Engineer, Revenue Foundations > User Billing]),
+  ),
   right_text: date_format(body: "August 2024 - October 2024"),
 )
 #text(
@@ -70,12 +78,51 @@ BSc. in Computer Science, #emph([Concentration in Algorithms and Complexity, Min
 )
 
 #two_sided_text(
-  left_text: [Software Engineer Intern, Service Infrastructure > Workflow Engine],
+  left_text: text(size: 0.9em, underline(
+    [Software Engineer Intern, Service Infrastructure > Workflow Engine],
+  )),
   right_text: date_format(body: "August 2024 - October 2024"),
 )
 #text(
   size: 0.8em,
   [
-    - W
+    - Built SDK for attaching and querying custom search attributes on durable workflows (built on top of Temporal workflows).
+    - Created UI for querying workflows with custom search attributes on internal management plane Amp.
+    - Feature used by all teams at Stripe managing Java services - my new grad team (User Billing) was a power-user of this feature.
+  ],
+)
+
+#line(length: 100%)
+#section_header(
+  header_text: "Teaching Assistant",
+)
+#two_sided_text(
+  left_text: [15-451 Algorithm Design and Analysis],
+  right_text: [Fall 2023],
+)
+#text(
+  size: 0.8em,
+  [#emph([Topics]): Randomized Algorithms, Splay Trees, Range Trees, Streaming Algorithms, Amortized Analysis, Linear Programming, Computational Geometry, Game Theory, Network Flows, Information Theory (for lower bound analyses)],
+)
+
+#two_sided_text(
+  left_text: [15-259 Probability and Computing],
+  right_text: [Spring 2023],
+)
+#text(
+  size: 0.8em,
+  [#emph([Topics]):
+    Probability from Kolmogorov axioms, Z-transforms, Laplace transforms, Poisson Processes, Randomized Algorithms, Sampling, Markov Chains and a little bit of Queuing theory
+  ],
+)
+
+#two_sided_text(
+  left_text: [15-251 Great Ideas in Theoretical Computer Science],
+  right_text: [Spring 2022, Fall 2022],
+)
+#text(
+  size: 0.8em,
+  [#emph([Topics]):
+    Automata theory, countability, computability, $bb(P)$ and $bb(N)bb(P)$ complexity classes, Turing and Karp reductions, approximation algorithms, randomized algorithms, cryptography.
   ],
 )
