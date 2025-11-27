@@ -1,5 +1,5 @@
 #let section_header(header_text: "") = {
-  text(fill: rgb("#000B58"), size: 1.35em, weight: 600, header_text)
+  text(fill: rgb("#000B58"), size: 1.15em, weight: 600, header_text)
 }
 
 #let title_bar(title_text: "", elements: array) = {
@@ -25,10 +25,9 @@
 
 #let two_sided_text(left_text: "", right_text: "") = {
   grid(
-    columns: (1fr, auto), 
+    columns: (1fr, auto),
     align: (left, right),
-    left_text, 
-    right_text
+    left_text, right_text,
   )
 }
 
@@ -36,11 +35,27 @@
   text([*#main_text* \ #subtext])
 }
 
-#let dashedline() = {v(-3pt); line(length: 100%, stroke: (dash: "dashed", thickness: 0.1mm)); v(-5pt)}
+#let dashedline() = {
+  v(-3pt)
+  line(length: 100%, stroke: (dash: "dashed", thickness: 0.1mm))
+  v(-5pt)
+}
 
 #let chiline() = { line(length: 100%) }
 
 #let date_format(body: "") = {
   text(size: 0.85em, emph(body))
+}
+
+#let job_subheading(title: "", date: "") = {
+  two_sided_text(
+    left_text: text(
+      size: 0.9em,
+      weight: 700,
+      fill: rgb("#232b47"),
+      title,
+    ),
+    right_text: date_format(body: date),
+  )
 }
 
