@@ -25,43 +25,42 @@
 
 #text(fill: rgb("#003161"), [*Stripe*])
 #job_subheading(
-  title: [Software Engineer II, Service Infrastructure > Production Engineering],
-  date: "November 2024 - Present",
+  title: [Software Engineer II, Production Engineering / API Platform],
+  date: "November 2025 - Present",
 )
 #text(
   size: 0.8em,
   [
-      - Optimized bapling migration script to minimize code diffs per migration from #text(fill: rgb("#08872B"), [+29,635]), #text(fill: red, [-28,329]) $arrow$ #text(fill: rgb("#08872B"), [+1,689]), #text(fill: red, [-381])
-      - Migrated and traffic shifted 3 customer facing endpoints from legacy Sinatra framework to new API Methods framework
+    - Migrated legacy monolithic Ruby service powering Stripe Dashboard endpoints, manage-srv (that served #text(weight: 600, [15-25M requests a day])), to new Ruby service frameworks called baplings, allowing separate deploys for teams, out-of-the-box detectors, and auto-scaling.
+    - Rolled out new combined cache key rate limiters (that allowed v1 and v2 Stripe API requests to share token buckets), replacing our legacy Gen2 Rate Limiters (that only rate limited v1 requests), allowing for cross-cutting rate limit configurations across traffic slices.
   ],
 )
 
 
 #job_subheading(
-  title: [Software Engineer I $arrow$ II, Revenue Foundations > User Billing],
-  date: "August 2024 - October 2024",
+  title: [Software Engineer I $arrow$ II, User Billing],
+  date: "August 2024 - October 2025",
 )
 #text(
   size: 0.8em,
   [
-      - #text(weight: 600, [\$7.6M ARR unlocked]) by allowing merchants' subscriptions to Stripe products to be backdated, in addition to improving system flexibility to contract onboarding errors and delays
-      - #text(weight: 600, [\$199k/year saved]) through migrating Airflow tasks from Concord to Strawberry Hadoop clusters and packing periodic job cycles in the same cluster to improve utilization
-    - Managed Stripe's largest Mongo replsets, and the largest offline workloads at Stripe during incidents and when shipping features
+      - #text(weight: 600, [\$9.3M ARR unlocked]) by allowing merchants' subscriptions to Stripe products to be backdated, in addition to improving system flexibility to contract onboarding errors and delays
+      - #text(weight: 600, [\$199k/year saved]) through migrating Airflow tasks to more CPU efficient instance types, and packing periodic job cycles in the same cluster to improve utilization
     - Monetized Issuer Processor, Multi-Currency Settlements, Issuing Postfunding Automation, Spread Based Treasury Admin products.
     - Integrated Stripe Billing, Tax, Revenue Recognition and Data Studio products into subscriptions usage-based billing structures.
   ],
 )
 
 #job_subheading(
-  title: [Software Engineer Intern, Service Infrastructure > Workflow Engine],
-  date: "August 2024 - October 2024",
+  title: [Software Engineer Intern, Workflow Engine],
+  date: "May 2023 - August 2023",
 )
 #text(
   size: 0.8em,
   [
-    - Built SDK and management plane UI for attaching and querying custom search attributes on durable workflows (built on top of Temporal workflows).
-    - Allowed teams using durable workflows at Stripe to quickly search for workflows that meet a certain criteria during incidents, or for general observability and monitoring.
-    - Feature used by all teams at Stripe managing Java services - my new grad team (User Billing) was a power-user of this feature.
+    - Creaed interface for defining and upserting custom search attributes on durable workflows (built on top of Temporal workflows), and built admin app page for querying workflows by custom search attributes.
+    - Teams defined custom search attributes for observability and monitoring on their workflows, allowing for quicker time-to-root-cause during incidents involving workflow failures
+    - Feature used by all teams at Stripe managing Java workflows - my new grad team (User Billing) was a power-user of this feature in their reassessment workflows.
   ],
 )
 
@@ -135,9 +134,24 @@
 #text(
   size: 0.8em,
   [
-    - Built the full compiler pipeline with a partner, compiling C0 source language to x86-64 Assembly
+    - Built the full compiler pipeline with a partner, compiling the #underline(link("https://c0.cs.cmu.edu/docs/c0-reference.pdf", [C0 language])) to x86-64 Assembly
     - Implemented Register Allocation using Chordal Graph Coloring in 3 days by myself, which our team had to extend 3 months later
-    - Added optimizations such as ADCE, CCP, Function Inlining with recursion unrolling, Tail recursion optimization, Loop header alignment, Loop Invariant Hoisting. Final compiler competitive with `gcc -O1`
+    - Added optimizations such as ADCE, CCP, Function Inlining with recursion unrolling, Tail recursion optimization, Loop header alignment, Loop Invariant Hoisting. Final compiler was competitive with `gcc -O1`
+  ],
+)
+#two_sided_text(
+  left_text: [#text(
+    size: 0.9em,
+    weight: 700,
+    fill: rgb("#003161"),
+    [Tacopy],
+  )],
+  right_text: date_format(body: "Thanksgiving Break 2025"),
+)
+#text(
+  size: 0.8em, 
+[
+    - Created a Python Decorator that applied Tail Call Optimizations to tail-recursive Python functions, offering upto 2.88x speedup in Python, and RecursionError elimination (Repo: #link("https://github.com/raaidrt/tacopy")[#underline([https://github.com/raaidrt/tacopy])], #link("https://news.ycombinator.com/item?id=46094330")[#underline([HN Post])])
   ],
 )
 #two_sided_text(
@@ -147,20 +161,16 @@
     fill: rgb("#003161"),
     [$sqrt(2)$ is Irrational],
   )],
-  right_text: date_format(body: "Summer 2025"),
-)
-#text(
-  size: 0.8em,
-  [
-    - Wrote the classical proof that there don't exist $a, b in bb(Z), b eq.not 0$ such that $sqrt(2) = a/b$ in the Lean 4 Theorem Prover / Programming Language
-    - Github repository with proof: #link("https://github.com/raaidrt/irrational-sqrt-2")[#underline([https://github.com/raaidrt/irrational-sqrt-2])]
-  ],
+  right_text: date_format(body: link("https://github.com/raaidrt/irrational-sqrt-2")[#underline([https://github.com/raaidrt/irrational-sqrt-2])]),
 )
 #line(length: 100%)
 #text(
   size: 0.9em,
-  [#text(fill: rgb("#003161"), [*Languages (In order of decreasing familiarity)*]): Python, OCaml, Java, C, Rust, C++, Typescript / Javascript \
-    #text(fill: rgb("#003161"), [*Current Interests*]): Distributed Systems, Latency Sensistive Optimizations, Compilers, Programming Languages],
+  [#text(fill: rgb("#003161"), [*Languages (In order of decreasing familiarity)*]): Python, Ruby, Java, OCaml, C, Rust, C++, Typescript / Javascript)]
 )
 
+#text(
+  size: 0.9em,
+  [#text(fill: rgb("#003161"), [*Current Interests*]): Distributed Systems, Latency Sensistive Optimizations, Compilers, Programming Languages)]
+)
 
